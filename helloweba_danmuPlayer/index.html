@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>演示：基于HTML5的有弹幕动能的视频播放器</title>
+<meta name="keywords" content="播放器" />
+<meta name="description" content="Helloweba演示平台，演示XHTML、CSS、jquery、PHP案例和示例" />
+<!--<link rel="stylesheet" type="text/css" href="http://www.helloweba.com/demo/css/main.css" />-->
+	<link rel="stylesheet" href="css/templatemo-style.css">
+<link rel="stylesheet" href="css/main.css">
+<!--<style type="text/css">-->
+<!--.demo{width:100%;margin:0px auto 10px auto;padding:10px;}-->
+<!--</style>-->
+</head>
+
+<body>
+<!--<div id="header">-->
+   <!--<div id="logo"><h1><a href="http://www.helloweba.com" title="返回helloweba首页">helloweba</a></h1></div>-->
+<!--</div>-->
+
+<!--<div id="main" style="width:100%">-->
+	<!--<div class="demo">-->
+<div class="site-bg"></div>
+<div class="site-bg-overlay"></div>
+		<div id="danmup" style="position:absolute;z-index:99; top:350px; left:590px; right:0; bottom:0;margin:20px auto"></div>
+	<!--</div>-->
+<!--</div>-->
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery.shCircleLoader.js"></script>
+<script src="js/jquery.danmu.js"></script>
+<script src="js/main.js"></script>
+<script>
+$("#danmup").DanmuPlayer({
+	src: "1.mp4",
+    height: "360px", //区域的高度
+    width: "600px" //区域的宽度
+    ,urlToGetDanmu:"getData.php"
+    ,urlToPostDanmu:"sendData.php"
+  });
+
+  $("#danmup .danmu-div").danmu("addDanmu",[
+    { "text":"珊妹妹，生日快乐哦(´-ω-`)一直觉得你是个善良美丽可爱的小仙女而且你特别爱笑(⑉°з°)-♡" ,color:"white",size:1,position:0,time:20}
+    ,{ "text":"丽珊宝宝呀~你是如日葵一般温暖向上的女子" ,color:"green",size:1,position:0,time:30}
+    ,{ "text":"祝河口菇凉丽珊生日快乐，学业顺利，跟生哥好好的～稳！哈哈哈" ,color:"#f30",size:1,position:0,time:100}
+    ,{ "text":"珊姐珊姐，生日快乐啊。我还记得你欠我的超级大的大白兔奶糖！！" ,color:"yellow" ,size:1,position:0,time:30}
+    ,{ "text":"生日快乐啊 女朋友" , color:"red" ,size:1,position:0,time:19}
+    ,{ "text":"丽珊师姐，年年十八啊哈哈哈祝你生日快乐，脱单就不用了，有俊生师兄，那就发大财啊！！！！" ,color:"orange",size:1,position:0,time:230}
+    ,{ "text":"♡丽珊和俊生大佬是足迹里的模范情侣啊" ,color:"green",size:1,position:0,time:300}
+    ,{ "text":"无论是天晴下雨大雪都要捧着你的小圆脸哈哈笑。距离太远照顾好自己。生日快乐生日快乐昭君" ,color:"#f30",size:1,position:0,time:100}
+    ,{ "text":"可爱的珊姐，生日快乐噢" ,color:"yellow" ,size:1,position:0,time:300}
+    ,{ "text":"认真漂亮的调研公关部小姐姐！" , color:"red" ,size:1,position:0,time:190}
+    ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:200}
+    ,{ "text":"辛苦啦！丽珊！身为部长，每次都有操不完的！" ,color:"orange",size:1,position:0,time:230}
+    ,{ "text":"♡希望你的付出都能得到回报！一路向阳！" ,color:"green",size:1,position:0,time:230}
+    ,{ "text":"我还记得你欠我的超级大的大白兔奶糖！！昭君" ,color:"#f30",size:1,position:0,time:240}
+    ,{ "text":"可爱的珊姐，生日快乐噢" ,color:"yellow" ,size:1,position:0,time:150}
+    ,{ "text":"祝你和生哥幸福长久，学业爱情都能顺顺利利" , color:"red" ,size:1,position:0,time:190}
+    ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:150}
+    ,{ "text":"认真漂亮的调研公关部小姐姐！" , color:"red" ,size:1,position:0,time:190}
+    ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:200}
+    ,{ "text":"辛苦啦！丽珊！身为部长，每次都有操不完的！" ,color:"orange",size:1,position:0,time:230}
+    ,{ "text":"♡希望你的付出都能得到回报！一路向阳！" ,color:"green",size:1,position:0,time:230}
+    ,{ "text":"我还记得你欠我的超级大的大白兔奶糖！！昭君" ,color:"#f30",size:1,position:0,time:240}
+    ,{ "text":"可爱的珊姐，生日快乐噢" ,color:"yellow" ,size:1,position:0,time:150}
+    ,{ "text":"祝你和生哥幸福长久，学业爱情都能顺顺利利" , color:"red" ,size:1,position:0,time:190}
+    ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:150}
+    ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:200}
+    ,{ "text":"辛苦啦！丽珊！身为部长，每次都有操不完的！" ,color:"orange",size:1,position:0,time:230}
+    ,{ "text":"♡希望你的付出都能得到回报！一路向阳！" ,color:"green",size:1,position:0,time:230}
+    ,{ "text":"我还记得你欠我的超级大的大白兔奶糖！！昭君" ,color:"#f30",size:1,position:0,time:240}
+    ,{ "text":"可爱的珊姐，生日快乐噢" ,color:"yellow" ,size:1,position:0,time:150}
+    ,{ "text":"祝你和生哥幸福长久，学业爱情都能顺顺利利" , color:"red" ,size:1,position:0,time:190}
+    ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:150}
+    ,{ "text":"认真漂亮的调研公关部小姐姐！" , color:"red" ,size:1,position:0,time:190}
+    ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:200}
+    ,{ "text":"辛苦啦！丽珊！身为部长，每次都有操不完的！" ,color:"orange",size:1,position:0,time:230}
+    ,{ "text":"♡希望你的付出都能得到回报！一路向阳！" ,color:"green",size:1,position:0,time:230}
+    ,{ "text":"我还记得你欠我的超级大的大白兔奶糖！！昭君" ,color:"#f30",size:1,position:0,time:240}
+    ,{ "text":"可爱的珊姐，生日快乐噢" ,color:"yellow" ,size:1,position:0,time:150}
+    ,{ "text":"祝你和生哥幸福长久，学业爱情都能顺顺利利" , color:"red" ,size:1,position:0,time:190}
+    ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:150}
+      ,{ "text":"我还记得你欠我的超级大的大白兔奶糖！！昭君" ,color:"#f30",size:1,position:0,time:240}
+      ,{ "text":"可爱的珊姐，生日快乐噢" ,color:"yellow" ,size:1,position:0,time:150}
+      ,{ "text":"祝你和生哥幸福长久，学业爱情都能顺顺利利" , color:"red" ,size:1,position:0,time:190}
+      ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:150}
+      ,{ "text":"认真漂亮的调研公关部小姐姐！" , color:"red" ,size:1,position:0,time:190}
+      ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:200}
+      ,{ "text":"辛苦啦！丽珊！身为部长，每次都有操不完的！" ,color:"orange",size:1,position:0,time:230}
+      ,{ "text":"♡希望你的付出都能得到回报！一路向阳！" ,color:"green",size:1,position:0,time:230}
+      ,{ "text":"我还记得你欠我的超级大的大白兔奶糖！！昭君" ,color:"#f30",size:1,position:0,time:240}
+      ,{ "text":"可爱的珊姐，生日快乐噢" ,color:"yellow" ,size:1,position:0,time:150}
+      ,{ "text":"祝你和生哥幸福长久，学业爱情都能顺顺利利" , color:"red" ,size:1,position:0,time:190}
+      ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:150}
+      ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:200}
+      ,{ "text":"辛苦啦！丽珊！身为部长，每次都有操不完的！" ,color:"orange",size:1,position:0,time:230}
+      ,{ "text":"♡希望你的付出都能得到回报！一路向阳！" ,color:"green",size:1,position:0,time:230}
+      ,{ "text":"我还记得你欠我的超级大的大白兔奶糖！！昭君" ,color:"#f30",size:1,position:0,time:240}
+      ,{ "text":"可爱的珊姐，生日快乐噢" ,color:"yellow" ,size:1,position:0,time:150}
+      ,{ "text":"祝你和生哥幸福长久，学业爱情都能顺顺利利" , color:"red" ,size:1,position:0,time:190}
+      ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:150}
+      ,{ "text":"认真漂亮的调研公关部小姐姐！" , color:"red" ,size:1,position:0,time:190}
+      ,{ "text":"足迹有女初长成，回头一笑百媚生。" ,color:"orange",size:1,position:0,time:200}
+      ,{ "text":"辛苦啦！丽珊！身为部长，每次都有操不完的！" ,color:"orange",size:1,position:0,time:230}
+      ,{ "text":"♡希望你的付出都能得到回报！一路向阳！" ,color:"green",size:1,position:0,time:230}
+      ,{ "text":"我还记得你欠我的超级大的大白兔奶糖！！昭君" ,color:"#f30",size:1,position:0,time:240}
+      ,{ "text":"可爱的珊姐，生日快乐噢" ,color:"yellow" ,size:1,position:0,time:150}
+      ,{ "text":"祝你和生哥幸福长久，学业爱情都能顺顺利利" , color:"red" ,size:1,position:0,time:190}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:420}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:410}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:430}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+      ,{ "text":"生日快乐哈哈哈哈哈。" ,color:"orange",size:1,position:0,time:440}
+
+  ])
+</script>
+
+
+</body>
+</html>
